@@ -56,7 +56,7 @@ interface Translation {
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/question-manager.git
+git clone https://github.com/LeonardoQ7/question-manager.git
 cd question-manager
 ```
 
