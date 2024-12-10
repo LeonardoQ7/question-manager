@@ -21,6 +21,7 @@ Question Manager is a powerful web application designed to create and manage mul
 - 📱 Fully responsive design
 - 🎨 Modern UI with Tailwind CSS
 - 🚀 Built with Vite for optimal performance
+- 🐳 Docker support for easy deployment
 
 ## Question Structure
 
@@ -49,14 +50,16 @@ interface Translation {
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js (v14 or higher) and npm
+- OR Docker and Docker Compose
 
 ### Installation
 
+#### Using Node.js
+
 1. Clone the repository:
 ```bash
-git clone https://github.com/LeonardoQ7/question-manager.git
+git clone https://github.com/yourusername/question-manager.git
 cd question-manager
 ```
 
@@ -70,7 +73,27 @@ npm install
 npm run dev
 ```
 
+#### Using Docker
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/question-manager.git
+cd question-manager
+```
+
+2. Build and start the container:
+```bash
+docker-compose up --build
+```
+
 The application will be available at `http://localhost:5173`
+
+### Docker Commands
+
+- Start the application: `docker-compose up`
+- Build and start: `docker-compose up --build`
+- Stop the application: `docker-compose down`
+- View logs: `docker-compose logs -f`
 
 ## Usage Guide
 
@@ -133,6 +156,7 @@ src/
 - **Tailwind CSS**: Utility-first styling
 - **Vite**: Next-generation frontend tooling
 - **Lucide React**: Beautiful, consistent icons
+- **Docker**: Containerization and deployment
 
 ### Available Scripts
 
@@ -144,7 +168,11 @@ src/
 ### Building for Production
 
 ```bash
+# Using Node.js
 npm run build
+
+# Using Docker
+docker-compose -f docker-compose.prod.yml up --build
 ```
 
 Production files will be generated in the `dist` directory.
@@ -177,3 +205,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Vite](https://vitejs.dev/) - Build tool
 - [Lucide Icons](https://lucide.dev/) - Icon set
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Docker](https://www.docker.com/) - Containerization
